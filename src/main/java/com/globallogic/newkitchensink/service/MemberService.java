@@ -44,6 +44,7 @@ public class MemberService {
         }
     }
 
+    //Activated Transaction even if for now only one dml is applied, may be useful on enhancing the app
     @Transactional
     public MemberDTO createMember(MemberDTO memberDto) {
         Member toBeCreated = modelMapper.map(memberDto, Member.class);
