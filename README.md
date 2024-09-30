@@ -21,3 +21,10 @@ As such related to the original app it presents the following updates among othe
 - added Correlation interceptor, that for now creates(if not already existing) a new correlation token before reaching endpoint and binds it to a thread local for future use(for example logging and tracking)
 - Spring integration tests
 
+## Installation
+Clone the repo at: https://github.com/hagiumarius/newkitchensink.git
+- with a maven tool, run a mvn clean package in the root folder
+- with a java enabled terminal run a java -jar newkitchensink-0.0.1-SNAPSHOT.war on the resulting war in the /target subfolder
+- with the service started you can access it at http://localhost:8888/nks/members
+- A postman collection is available in the root folder with all 4 http calls
+

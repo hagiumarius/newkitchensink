@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
+/**
+ * SecurityConfig necessary to inject the BearerTokenFilter
+ */
 @Configuration
 @EnableWebSecurity()
 public class SecurityConfig {

@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.util.Objects;
+
 
 @Table(name = "users")
 @Entity
@@ -73,5 +75,18 @@ public class Member {
 
     public void setVisible(boolean visible) {
         this.visible = visible;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return visible == member.visible && Objects.equals(id, member.id) && Objects.equals(name, member.name) && Objects.equals(email, member.email) && Objects.equals(phoneNumber, member.phoneNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email, phoneNumber, visible);
     }
 }
