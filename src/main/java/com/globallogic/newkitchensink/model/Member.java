@@ -1,19 +1,19 @@
 package com.globallogic.newkitchensink.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Objects;
 
 
-@Table(name = "users")
-@Entity
+@Document("members")
 public class Member {
 
+    @Transient
+    public static final String ID_SEQUENCE_NAME = "members_sequence";
+
     @Id
-    @GeneratedValue
     private Long id;
 
     private String name;

@@ -1,6 +1,6 @@
 package com.globallogic.newkitchensink.controllers;
 
-import com.globallogic.newkitchensink.service.MemberService;
+import com.globallogic.newkitchensink.service.MemberWithJpaTemplateService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,10 @@ import java.util.List;
 @RequestMapping("/members")
 public class MemberController {
 
-    private final MemberService memberService;
+    private final MemberWithJpaTemplateService memberService;
 
     @Autowired
-    public MemberController(MemberService memberService) {
+    public MemberController(MemberWithJpaTemplateService memberService) {
         this.memberService = memberService;
     }
 
