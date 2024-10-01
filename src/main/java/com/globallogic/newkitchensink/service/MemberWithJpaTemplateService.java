@@ -79,7 +79,7 @@ public class MemberWithJpaTemplateService {
 
     public MemberDTO getMember(Long id) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("userId").is(id));
+        query.addCriteria(Criteria.where("id").is(id));
         Member found = memberTemplate.findOne(query,Member.class);
         if (found == null) {
             throw new EntityNotFoundException();
