@@ -13,6 +13,9 @@ import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
 
 
+/**
+ * Service used to generate incremental sequence numbers for the main Member entity
+ */
 @Service
 public class SequenceGeneratorService {
 
