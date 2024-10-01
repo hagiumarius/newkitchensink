@@ -79,7 +79,7 @@ public class MemberControllerIntegrationTest {
                 .content(json)).andDo(print())
                 .andExpect(status().isCreated()).andExpect(content()
                 .contentType("application/json"))
-                .andExpect(jsonPath("$.id").value("2"));
+                .andExpect(jsonPath("$.name").value("Testing dude"));
     }
 
     @Test
@@ -122,7 +122,7 @@ public class MemberControllerIntegrationTest {
                         .content(json)).andDo(print())
                 .andExpect(status().isOk()).andExpect(content()
                         .contentType("application/json"))
-                .andExpect(jsonPath("$.id").value("1"));
+                .andExpect(jsonPath("$.name").value("Testing dude"));
     }
 
     private String getPostBody() throws JsonProcessingException {
