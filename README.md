@@ -10,7 +10,7 @@ This applications is intended to replace the kitchensink project under https://g
 It uses Java 21 and replaces Jakarta EE with Spring Boot 3.3.4 (with all Spring 6 dependencies)
 As such related to the original app it presents the following updates among others:
 - Spring rest controllers as opposed to EE controllers
-- For db it uses an in memory h2 database which is accessed via Spring Data Jpa
+- For db it uses an in memory h2 database which is accessed via Spring Data Jpa Repository pattern(based on query complexities Template pattern should also be considered)
 - A separation between transport object (MemberDTO) and actual persistence entity (Member), a conversion via model mapper bridges between the 2
 - Validation performed via Spring validation, based itself on jakarta EE annotations
 - Exception handling done via Controller Advice

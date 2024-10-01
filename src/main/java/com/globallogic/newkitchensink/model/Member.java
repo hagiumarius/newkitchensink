@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 import java.util.Objects;
 
 
-@Table(name = "users")
+@Table(name = "members")
 @Entity
 public class Member {
 
