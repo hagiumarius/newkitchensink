@@ -20,6 +20,8 @@ As such related to the original app it presents the following updates among othe
 - filter checking the "Authorization" header and trying to do the standard permission check, as no authn server is in place, no actual check happens but the filter is in place and checks at least for the presence of the token
 - added Correlation interceptor, that for now creates(if not already existing) a new correlation token before reaching endpoint and binds it to a thread local for future use(for example logging and tracking)
 - Spring integration tests
+- an attempt to a mongodb implementation has been done in branch feature/mongodb
+- for this particular mongo db impl a switch from spring data repository pattern to spring data template has been performed
 
 ## Installation
 Clone the repo at: https://github.com/hagiumarius/newkitchensink.git
